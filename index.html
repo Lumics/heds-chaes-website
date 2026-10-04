@@ -69,6 +69,30 @@
     .beat p { font-size: 18px; color: var(--ink-soft); max-width: 420px; margin-left: auto; }
     .beat:nth-of-type(even) p { margin-left: 0; }
 
+    /* NEW: features as yellow Swiss hiking signposts */
+    .signpost { padding: 40px 22px 110px; text-align: center; }
+    .signpost h2 { font-family: var(--serif); font-size: clamp(30px, 4.6vw, 48px); line-height: 1.1; letter-spacing: -0.02em; }
+    .signpost > p { color: var(--ink-soft); font-size: 18px; margin: 10px auto 46px; max-width: 560px; }
+    .post { position: relative; max-width: 940px; margin: 0 auto; padding: 10px 0 40px; }
+    .post::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 16px; margin-left: -8px; border-radius: 4px; background: linear-gradient(90deg, #9A9A94, #C9C9C2 45%, #8C8C86); }
+    .sign { position: relative; display: flex; flex-direction: column; gap: 8px; width: min(440px, 92%); margin: 0 0 34px; }
+    /* Plates start at the pole; descriptions keep clear of it. */
+    .sign.right { width: min(440px, 50%); margin-left: calc(50% - 4px); align-items: flex-start; text-align: left; }
+    .sign.left { width: min(440px, 50%); margin-left: auto; margin-right: calc(50% - 4px); align-items: flex-end; text-align: right; }
+    .sign.right p { padding-left: 26px; }
+    .sign.left p { padding-right: 26px; }
+    .plate { display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; background: #F7C600; color: #111; font-weight: 800; font-size: clamp(17px, 2.4vw, 21px); padding: 14px 44px 14px 22px; box-shadow: 0 14px 28px rgba(35,28,20,0.16); clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%); }
+    .sign.left .plate { flex-direction: row-reverse; padding: 14px 22px 14px 44px; clip-path: polygon(30px 0, 100% 0, 100% 100%, 30px 100%, 0 50%); }
+    .plate span { white-space: nowrap; }
+    .plate small { font-weight: 700; font-size: 15px; white-space: nowrap; }
+    .sign p { color: var(--ink-soft); font-size: 16px; max-width: 360px; padding: 0 8px; }
+    @media (max-width: 700px) {
+      .post::before { left: 14px; }
+      .sign, .sign.left, .sign.right { width: auto; margin: 0 0 30px 22px; align-items: flex-start; text-align: left; }
+      .sign.left p, .sign.right p { padding: 0 0 0 20px; }
+      .sign.left .plate { flex-direction: row; padding: 14px 44px 14px 22px; clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%); }
+    }
+
     .punchline { text-align: center; padding: 30px 22px 110px; }
     .punchline img { width: 116px; height: 116px; border-radius: 28px; box-shadow: 0 26px 60px rgba(35,28,20,0.28); transform: rotate(-4deg); }
     .punchline h2 { font-family: var(--serif); font-size: clamp(32px, 5vw, 54px); line-height: 1.08; margin: 30px auto 14px; max-width: 760px; letter-spacing: -0.02em; }
@@ -283,15 +307,34 @@
     </div>
   </section>
 
+  <section class="signpost" id="new">
+    <h2 data-i18n="sp_title">Neu am Wegweiser.</h2>
+    <p data-i18n="sp_sub">Damit du keinen guten Käse mehr verpasst, auch wenn du ihn erst später probierst.</p>
+    <div class="post">
+      <div class="sign right">
+        <div class="plate"><span data-i18n="sp1_t">Etikette scannen</span><small data-i18n="sp1_time">2 Sek.</small></div>
+        <p data-i18n="sp1_d">Fotografiere Etikette, Schild oder Verpackung. Dein iPhone liest sie und findet den Käse. Unbekannt? Dann ist er schon fast eingetragen.</p>
+      </div>
+      <div class="sign left">
+        <div class="plate"><span data-i18n="sp2_t">Später bewerten</span><small data-i18n="sp2_time">morgen</small></div>
+        <p data-i18n="sp2_d">Im Laden gekauft, zu Hause probiert: Halte ihn gleich fest und bewerte ihn, wenn du ihn gekostet hast. Auf Wunsch mit Erinnerung.</p>
+      </div>
+      <div class="sign right">
+        <div class="plate"><span data-i18n="sp3_t">Käsereien vergleichen</span><small data-i18n="sp3_time">450 Käsereien</small></div>
+        <p data-i18n="sp3_d">Gleicher Käse, andere Käserei: Welcher Sbrinz schmeckt dir am besten? Gib die Käserei an und vergleiche.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="closing" id="closing">
     <h2 data-i18n="close_title">Der nächste gute Käse wartet schon.</h2>
-    <p data-i18n="close_text">Heds Chäs? kommt bald für iPhone. Über 1'800 Käse sind schon drin, von Le Gruyère bis zum Chäsli vom Hofladen.</p>
+    <p data-i18n="close_text">Heds Chäs? kommt bald für iPhone. Über 1'200 Käse und 450 Käsereien sind schon drin, von Le Gruyère bis zum Chäsli vom Hofladen.</p>
     <a class="cta" href="#closing"><span data-i18n="cta">Bald im App Store</span></a>
   </section>
 
   <footer>
     © 2026 Heds Chäs? · <span data-i18n="footer_made">Gemacht in der Schweiz</span><br>
-    <a href="privacy.html" data-i18n="footer_privacy">Datenschutz</a><a href="mailto:maurin@maurinwidmer.ch" data-i18n="footer_contact">Kontakt</a>
+    <a href="support.html" data-i18n="footer_help">Hilfe</a><a href="privacy.html" data-i18n="footer_privacy">Datenschutz</a><a href="mailto:maurin@maurinwidmer.ch" data-i18n="footer_contact">Kontakt</a>
   </footer>
 
 <script>
@@ -323,8 +366,12 @@ const translations = {
     mock_note: "Schmeckt nach Sommer. Das Murmeli hat applaudiert.",
     tag1: "Nussig", tag2: "Kräuter", tag3: "Rezent",
     close_title: "Der nächste gute Käse wartet schon.",
-    close_text: "Heds Chäs? kommt bald für iPhone. Über 1'800 Käse sind schon drin, von Le Gruyère bis zum Chäsli vom Hofladen.",
-    footer_made: "Gemacht in der Schweiz", footer_privacy: "Datenschutz", footer_contact: "Kontakt"
+    close_text: "Heds Chäs? kommt bald für iPhone. Über 1'200 Käse und 450 Käsereien sind schon drin, von Le Gruyère bis zum Chäsli vom Hofladen.",
+    sp_title: "Neu am Wegweiser.", sp_sub: "Damit du keinen guten Käse mehr verpasst, auch wenn du ihn erst später probierst.",
+    sp1_t: "Etikette scannen", sp1_time: "2 Sek.", sp1_d: "Fotografiere Etikette, Schild oder Verpackung. Dein iPhone liest sie und findet den Käse. Unbekannt? Dann ist er schon fast eingetragen.",
+    sp2_t: "Später bewerten", sp2_time: "morgen", sp2_d: "Im Laden gekauft, zu Hause probiert: Halte ihn gleich fest und bewerte ihn, wenn du ihn gekostet hast. Auf Wunsch mit Erinnerung.",
+    sp3_t: "Käsereien vergleichen", sp3_time: "450 Käsereien", sp3_d: "Gleicher Käse, andere Käserei: Welcher Sbrinz schmeckt dir am besten? Gib die Käserei an und vergleiche.",
+    footer_made: "Gemacht in der Schweiz", footer_help: "Hilfe", footer_privacy: "Datenschutz", footer_contact: "Kontakt"
   },
   fr: {
     _title: "Heds Chäs? – Garde une trace de chaque fromage que tu goûtes",
@@ -353,8 +400,12 @@ const translations = {
     mock_note: "Un goût d'été. La marmotte a applaudi.",
     tag1: "Noisette", tag2: "Herbes", tag3: "Corsé",
     close_title: "Le prochain bon fromage t'attend déjà.",
-    close_text: "Heds Chäs? arrive bientôt sur iPhone. Plus de 1 800 fromages y sont déjà, du Gruyère AOP au petit fromage de la ferme.",
-    footer_made: "Fait en Suisse", footer_privacy: "Confidentialité", footer_contact: "Contact"
+    close_text: "Heds Chäs? arrive bientôt sur iPhone. Plus de 1 200 fromages et 450 fromageries y sont déjà, du Gruyère AOP au petit fromage de la ferme.",
+    sp_title: "Nouveau au poteau indicateur.", sp_sub: "Pour ne plus manquer un bon fromage, même si tu ne le goûtes que plus tard.",
+    sp1_t: "Scanner l'étiquette", sp1_time: "2 s", sp1_d: "Photographie l'étiquette, le panneau ou l'emballage. Ton iPhone la lit et trouve le fromage. Inconnu ? Il est déjà presque saisi.",
+    sp2_t: "Noter plus tard", sp2_time: "demain", sp2_d: "Acheté au magasin, goûté à la maison : note-le tout de suite et donne tes étoiles une fois goûté. Avec un rappel si tu veux.",
+    sp3_t: "Comparer les fromageries", sp3_time: "450 fromageries", sp3_d: "Même fromage, autre fromagerie : quel Sbrinz préfères-tu ? Indique la fromagerie et compare.",
+    footer_made: "Fait en Suisse", footer_help: "Aide", footer_privacy: "Confidentialité", footer_contact: "Contact"
   },
   en: {
     _title: "Heds Chäs? – Track every cheese you taste",
@@ -383,8 +434,12 @@ const translations = {
     mock_note: "Tastes like summer. The marmot applauded.",
     tag1: "Nutty", tag2: "Herbal", tag3: "Strong",
     close_title: "Your next great cheese is already waiting.",
-    close_text: "Heds Chäs? is coming soon to iPhone. More than 1,800 cheeses are already in it, from Le Gruyère to the little one from the farm shop.",
-    footer_made: "Made in Switzerland", footer_privacy: "Privacy", footer_contact: "Contact"
+    close_text: "Heds Chäs? is coming soon to iPhone. More than 1,200 cheeses and 450 dairies are already in it, from Le Gruyère to the little one from the farm shop.",
+    sp_title: "New at the signpost.", sp_sub: "So you never miss a good cheese again, even if you only taste it later.",
+    sp1_t: "Scan the label", sp1_time: "2 sec", sp1_d: "Snap the label, the sign or the package. Your iPhone reads it and finds the cheese. Not there yet? Then it's almost filled in.",
+    sp2_t: "Rate it later", sp2_time: "tomorrow", sp2_d: "Bought in the shop, tasted at home: log it right away and rate it once you've tried it. With a reminder if you like.",
+    sp3_t: "Compare dairies", sp3_time: "450 dairies", sp3_d: "Same cheese, different dairy: which Sbrinz do you like best? Name the dairy and compare.",
+    footer_made: "Made in Switzerland", footer_help: "Help", footer_privacy: "Privacy", footer_contact: "Contact"
   }
 };
 

@@ -65,7 +65,7 @@ const policies = {
     title: "Datenschutz – Heds Chäs?", home: "Startseite", contact: "Kontakt",
     html: `
 <h1>Datenschutzerklärung</h1>
-<p class="eff">Gültig ab 30. September 2026</p>
+<p class="eff">Gültig ab 4. Oktober 2026</p>
 <p class="lead">Heds Chäs? ist eine App, um Käse festzuhalten, zu bewerten und mit Freunden zu teilen. Sie wird von Maurin Dai in der Schweiz entwickelt. Maurin Dai ist verantwortlich für die Bearbeitung deiner Daten nach dem Schweizer Datenschutzgesetz (DSG) und, wo anwendbar, der EU-Datenschutz-Grundverordnung (DSGVO).</p>
 <div class="summary"><p><strong>Kurz gesagt:</strong> Was du in Heds Chäs? teilst (dein Profil und deine Check-ins), wird in Apples iCloud gespeichert, damit deine Freunde es sehen können. Du kannst alles jederzeit direkt in der App löschen.</p></div>
 <h2>Dein Konto</h2>
@@ -74,15 +74,21 @@ const policies = {
 <p>Folgendes wird in der Datenbank der App in Apples iCloud (öffentliche CloudKit-Datenbank) gespeichert:</p>
 <ul>
 <li><strong>Profil:</strong> Benutzername, Anzeigename sowie optional eine kurze Beschreibung, ein Profilbild, dein Heimatland oder -kanton und ob dein Profil privat ist.</li>
-<li><strong>Check-ins:</strong> welchen Käse du probiert hast, deine Bewertung, Aromen, wo du ihn gekauft hast, eine optionale Notiz, ein optionales Foto und der Zeitpunkt.</li>
+<li><strong>Check-ins:</strong> welchen Käse du probiert hast, deine Bewertung, Aromen, optional die Käserei, wo du ihn gekauft hast, eine optionale Notiz, ein optionales Foto, ob du ihn noch bewerten willst, sowie Zeitpunkt und allfällige Bearbeitung.</li>
 <li><strong>Follows:</strong> wem du folgst, wer dir folgt sowie Follow-Anfragen und deren Antworten.</li>
 <li><strong>Beiträge zum Katalog:</strong> Käse und Produzenten (z. B. Käsereien), die du zum gemeinsamen Katalog hinzufügst.</li>
 </ul>
 <p>Diese Informationen sind für andere Nutzerinnen und Nutzer von Heds Chäs? sichtbar. Wenn dein Profil <strong>privat</strong> ist, zeigt die App deine Check-ins nur Personen, deren Follow-Anfrage du angenommen hast. Dieser Schutz wird von der App umgesetzt: Die Daten selbst liegen in derselben gemeinsamen iCloud-Datenbank wie alle anderen. Teile deshalb in einem Check-in nichts, was andere Nutzer nicht sehen sollen.</p>
 <h2>Fotos</h2>
 <p>Die App greift nur auf Fotos zu, die du selbst auswählst oder mit der Kamera aufnimmst. Vor dem Hochladen wird ein Foto verkleinert und seine Metadaten, einschliesslich eines allfälligen Standorts, werden entfernt. Auf den Rest deiner Fotomediathek greift die App nicht zu.</p>
+<h2>Etiketten scannen</h2>
+<p>Wenn du eine Etikette, ein Schild oder eine Verpackung scannst, wird das Foto ausschliesslich auf deinem iPhone ausgewertet (Texterkennung von Apple und, falls verfügbar, Apple Intelligence auf dem Gerät). Das Foto wird weder hochgeladen noch gespeichert.</p>
+<h2>Meldungen und Moderation</h2>
+<p>Wenn du einen Inhalt oder eine Person meldest, wird die Meldung (was gemeldet wurde, der Grund, deine optionale Notiz und deine Profil-Kennung) verschlüsselt in der Datenbank gespeichert. Lesen können sie nur der Entwickler und von ihm bestimmte Moderatorinnen und Moderatoren. Moderationsentscheide (z. B. ein Eintrag wird freigegeben oder ausgeblendet, ein Konto gesperrt) werden mit der Kennung der moderierenden Person gespeichert und sind für die App sichtbar, damit sie angewendet werden können. Von Nutzern hinzugefügte Käse und Käsereien werden für andere erst nach einer Prüfung sichtbar.</p>
+<h2>Mitteilungen</h2>
+<p>Wenn du Mitteilungen erlaubst, benachrichtigt dich Apples Push-Dienst, wenn dir jemand folgt oder deine Anfrage annimmt. Erinnerungen ans Bewerten werden nur auf deinem iPhone geplant. Beides kannst du in den Einstellungen ausschalten.</p>
 <h2>Was nur für dich ist</h2>
-<p>Deine Lieblingsproduzenten und deine Wunschliste werden in deinem persönlichen iCloud-Schlüssel-Wert-Speicher abgelegt. Nur du siehst sie; sie werden zwischen deinen eigenen Geräten synchronisiert.</p>
+<p>Deine Liste blockierter Personen, deine Lieblingsproduzenten und deine Wunschliste werden in deinem persönlichen iCloud-Schlüssel-Wert-Speicher abgelegt. Nur du siehst sie; sie werden zwischen deinen eigenen Geräten synchronisiert.</p>
 <h2>Wo deine Daten liegen</h2>
 <p>Alle oben genannten Daten werden von Apple im Rahmen von iCloud/CloudKit gespeichert und bearbeitet, gemäss der <a href="${APPLE}">Datenschutzrichtlinie von Apple</a>. Apple kann Daten auf Servern ausserhalb der Schweiz speichern, auch in der EU und den USA. Der Entwickler betreibt keine eigenen Server und erhält keine Kopien deiner Daten.</p>
 <h2>Wozu wir sie bearbeiten</h2>
@@ -104,7 +110,7 @@ const policies = {
     title: "Confidentialité – Heds Chäs?", home: "Accueil", contact: "Contact",
     html: `
 <h1>Politique de confidentialité</h1>
-<p class="eff">En vigueur depuis le 30 septembre 2026</p>
+<p class="eff">En vigueur depuis le 4 octobre 2026</p>
 <p class="lead">Heds Chäs? est une app pour garder une trace des fromages, les noter et les partager avec ses amis. Elle est développée par Maurin Dai en Suisse, responsable du traitement de tes données selon la loi fédérale sur la protection des données (LPD) et, lorsqu'il s'applique, le règlement général européen sur la protection des données (RGPD).</p>
 <div class="summary"><p><strong>En bref :</strong> ce que tu partages dans Heds Chäs? (ton profil et tes check-ins) est enregistré dans l'iCloud d'Apple pour que tes amis puissent le voir. Tu peux tout supprimer à tout moment directement dans l'app.</p></div>
 <h2>Ton compte</h2>
@@ -113,15 +119,21 @@ const policies = {
 <p>Les données suivantes sont enregistrées dans la base de données de l'app sur l'iCloud d'Apple (base de données publique CloudKit) :</p>
 <ul>
 <li><strong>Profil :</strong> nom d'utilisateur, nom affiché et, en option, une courte description, une photo de profil, ton pays ou canton d'origine et le fait que ton profil soit privé ou non.</li>
-<li><strong>Check-ins :</strong> le fromage goûté, ta note, les arômes, l'endroit où tu l'as acheté, une note et une photo facultatives, et la date.</li>
+<li><strong>Check-ins :</strong> le fromage goûté, ta note, les arômes, la fromagerie (facultatif), l'endroit où tu l'as acheté, une note et une photo facultatives, si tu veux encore le noter, ainsi que la date et une éventuelle modification.</li>
 <li><strong>Abonnements :</strong> qui tu suis, qui te suit, ainsi que les demandes d'abonnement et leurs réponses.</li>
 <li><strong>Contributions au catalogue :</strong> fromages et producteurs (p. ex. fromageries) que tu ajoutes au catalogue commun.</li>
 </ul>
 <p>Ces informations sont visibles par les autres utilisatrices et utilisateurs de Heds Chäs?. Si ton profil est <strong>privé</strong>, l'app n'affiche tes check-ins qu'aux personnes dont tu as accepté la demande. Cette protection est assurée par l'app : les données elles-mêmes se trouvent dans la même base de données iCloud commune que celles des autres. Ne publie donc rien dans un check-in que d'autres utilisateurs ne devraient pas voir.</p>
 <h2>Photos</h2>
 <p>L'app n'accède qu'aux photos que tu choisis toi-même ou que tu prends avec l'appareil photo. Avant l'envoi, une photo est réduite et ses métadonnées, y compris une éventuelle localisation, sont supprimées. L'app n'accède pas au reste de ta photothèque.</p>
+<h2>Scanner une étiquette</h2>
+<p>Quand tu scannes une étiquette, un panneau ou un emballage, la photo est analysée uniquement sur ton iPhone (reconnaissance de texte d'Apple et, si disponible, Apple Intelligence sur l'appareil). La photo n'est ni envoyée ni enregistrée.</p>
+<h2>Signalements et modération</h2>
+<p>Quand tu signales un contenu ou une personne, le signalement (ce qui est signalé, le motif, ta note facultative et l'identifiant de ton profil) est enregistré chiffré dans la base de données. Seuls le développeur et les modératrices et modérateurs qu'il désigne peuvent le lire. Les décisions de modération (p. ex. une entrée approuvée ou masquée, un compte suspendu) sont enregistrées avec l'identifiant de la personne qui modère et sont visibles par l'app afin d'être appliquées. Les fromages et fromageries ajoutés par des utilisateurs ne sont visibles par les autres qu'après vérification.</p>
+<h2>Notifications</h2>
+<p>Si tu autorises les notifications, le service push d'Apple te prévient quand quelqu'un te suit ou accepte ta demande. Les rappels pour noter sont planifiés uniquement sur ton iPhone. Tu peux désactiver les deux dans les Réglages.</p>
 <h2>Ce qui reste privé</h2>
-<p>Tes producteurs favoris et ta liste d'envies sont enregistrés dans ton stockage clé-valeur iCloud personnel. Toi seul·e les vois ; ils se synchronisent entre tes propres appareils.</p>
+<p>Ta liste de personnes bloquées, tes producteurs favoris et ta liste d'envies sont enregistrés dans ton stockage clé-valeur iCloud personnel. Toi seul·e les vois ; ils se synchronisent entre tes propres appareils.</p>
 <h2>Où sont tes données</h2>
 <p>Toutes les données ci-dessus sont enregistrées et traitées par Apple dans le cadre d'iCloud/CloudKit, conformément à la <a href="${APPLE}">politique de confidentialité d'Apple</a>. Apple peut stocker des données sur des serveurs situés hors de Suisse, notamment dans l'UE et aux États-Unis. Le développeur n'exploite aucun serveur propre et ne reçoit aucune copie de tes données.</p>
 <h2>Pourquoi nous les traitons</h2>
@@ -143,7 +155,7 @@ const policies = {
     title: "Privacy Policy – Heds Chäs?", home: "Home", contact: "Contact",
     html: `
 <h1>Privacy Policy</h1>
-<p class="eff">Effective 30 September 2026</p>
+<p class="eff">Effective 4 October 2026</p>
 <p class="lead">Heds Chäs? is an app for keeping track of cheese, rating it and sharing it with friends. It is developed by Maurin Dai in Switzerland, who is responsible for the processing of your data under the Swiss Federal Act on Data Protection (FADP) and, where it applies, the EU General Data Protection Regulation (GDPR).</p>
 <div class="summary"><p><strong>In short:</strong> what you share in Heds Chäs? (your profile and check-ins) is stored in Apple's iCloud so your friends can see it. You can delete everything from inside the app at any time.</p></div>
 <h2>Your account</h2>
@@ -152,15 +164,21 @@ const policies = {
 <p>The following is stored in the app's database on Apple's iCloud (CloudKit public database):</p>
 <ul>
 <li><strong>Profile:</strong> username, display name, and optionally a short bio, a profile photo, your home country or canton, and whether your profile is private.</li>
-<li><strong>Check-ins:</strong> which cheese you tried, your rating, flavour tags, where you bought it, an optional note and an optional photo, and the time.</li>
+<li><strong>Check-ins:</strong> which cheese you tried, your rating, flavour tags, optionally the dairy, where you bought it, an optional note and an optional photo, whether you still want to rate it, and the time and any later edit.</li>
 <li><strong>Follows:</strong> whom you follow, who follows you, and follow requests with their answers.</li>
 <li><strong>Catalog contributions:</strong> cheeses and producers (e.g. Käsereien) you add to the shared catalog.</li>
 </ul>
 <p>This information is visible to other people using Heds Chäs?. If your profile is <strong>private</strong>, the app only shows your check-ins to people whose follow request you accepted. This protection is enforced by the app: the data itself is stored in the same shared iCloud database as everyone else's, so don't post anything in a check-in you wouldn't want other users to see.</p>
 <h2>Photos</h2>
 <p>The app only accesses photos you actively choose or take with the camera. Before a photo is uploaded it is reduced in size and its metadata, including any location, is removed. The app does not read the rest of your photo library.</p>
+<h2>Scanning labels</h2>
+<p>When you scan a label, a sign or a package, the photo is analysed only on your iPhone (Apple's text recognition and, where available, Apple Intelligence on the device). The photo is neither uploaded nor stored.</p>
+<h2>Reports and moderation</h2>
+<p>When you report content or a person, the report (what was reported, the reason, your optional note and your profile identifier) is stored encrypted in the database. Only the developer and moderators chosen by him can read it. Moderation decisions (e.g. an entry approved or hidden, an account suspended) are stored with the moderator's identifier and are visible to the app so it can apply them. Cheeses and dairies added by users become visible to others only after review.</p>
+<h2>Notifications</h2>
+<p>If you allow notifications, Apple's push service notifies you when someone follows you or accepts your request. Reminders to rate are scheduled only on your iPhone. You can turn both off in Settings.</p>
 <h2>What stays private to you</h2>
-<p>Your favourite producers and your wishlist are stored in your own iCloud key-value storage. Only you can see them; they sync between your own devices.</p>
+<p>Your list of blocked people, your favourite producers and your wishlist are stored in your own iCloud key-value storage. Only you can see them; they sync between your own devices.</p>
 <h2>Where your data is stored</h2>
 <p>All of the above is stored and processed by Apple as part of iCloud/CloudKit, under <a href="${APPLE}">Apple's Privacy Policy</a>. Apple may store data on servers outside Switzerland, including in the EU and the United States. The developer does not run any other servers and does not receive copies of your data.</p>
 <h2>Why we process it</h2>

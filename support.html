@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hilfe – Heds Chäs?</title>
+  <meta name="description" content="Wie Heds Chäs? mit deinen Daten umgeht.">
+  <link rel="icon" href="images/icon-256.png">
+  <style>
+    :root { --cream: #FBF6EC; --cream-deep: #F3EAD6; --ink: #231C14; --ink-soft: rgba(35,28,20,0.74); --ink-muted: rgba(35,28,20,0.5); --mustard: #9E6C00; --gold-soft: #FFE9A8;
+      --serif: ui-serif, "New York", "Iowan Old Style", Georgia, serif; --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--sans); color: var(--ink); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--mustard); }
+    nav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(251,246,236,0.8); border-bottom: 1px solid rgba(35,28,20,0.06); }
+    .nav-inner { max-width: 820px; margin: 0 auto; padding: 0 22px; height: 62px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--ink); text-decoration: none; }
+    .brand img { width: 32px; height: 32px; border-radius: 9px; }
+    .lang-switcher { position: relative; }
+    .lang-btn { cursor: pointer; border: 1px solid rgba(35,28,20,0.16); border-radius: 999px; padding: 5px 12px; font-size: 14px; font-weight: 600; color: var(--ink-soft); background: rgba(255,255,255,0.6); user-select: none; }
+    .lang-dropdown { display: none; position: absolute; right: 0; top: 38px; background: #fff; border-radius: 14px; box-shadow: 0 18px 40px rgba(35,28,20,0.16); padding: 6px; min-width: 150px; }
+    .lang-switcher.open .lang-dropdown { display: block; }
+    .lang-option { padding: 8px 12px; border-radius: 9px; cursor: pointer; font-size: 15px; color: var(--ink-soft); }
+    .lang-option:hover { background: var(--cream); color: var(--ink); }
+    .lang-option.active { font-weight: 700; color: var(--ink); background: var(--gold-soft); }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 22px 70px; }
+    h1 { font-family: var(--serif); font-size: clamp(34px, 5vw, 46px); letter-spacing: -0.02em; line-height: 1.1; }
+    .eff { color: var(--ink-muted); font-size: 14px; margin: 8px 0 30px; }
+    h2 { font-family: var(--serif); font-size: 23px; margin: 36px 0 10px; letter-spacing: -0.01em; }
+    p { color: var(--ink-soft); margin-bottom: 14px; }
+    strong { color: var(--ink); }
+    ul { color: var(--ink-soft); margin: 0 0 14px 22px; }
+    li { margin-bottom: 8px; }
+    .lead { font-size: 19px; color: var(--ink); }
+    .summary { background: #fff; border-radius: 22px; padding: 22px 24px; box-shadow: 0 10px 30px rgba(35,28,20,0.06); margin: 24px 0; }
+    .summary p:last-child { margin-bottom: 0; }
+    footer { text-align: center; color: var(--ink-muted); font-size: 14px; padding: 30px 22px 50px; background: var(--cream-deep); }
+    footer a { color: var(--ink-soft); margin: 0 10px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="./"><img src="images/icon-256.png" alt="">Heds Chäs?</a>
+      <div class="lang-switcher" id="langSwitcher">
+        <div class="lang-btn" id="langBtn" role="button" tabindex="0" aria-haspopup="true">DE ▾</div>
+        <div class="lang-dropdown" role="menu">
+          <div class="lang-option" data-lang="de" role="menuitem">Deutsch</div>
+          <div class="lang-option" data-lang="fr" role="menuitem">Français</div>
+          <div class="lang-option" data-lang="en" role="menuitem">English</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="policy"></main>
+
+  <footer>© 2026 Heds Chäs? · <a href="./" data-i18n="home">Startseite</a><a href="mailto:maurin@maurinwidmer.ch" data-i18n="contact">Kontakt</a></footer>
+
+<script>
+const EMAIL = '<a href="mailto:maurin@maurinwidmer.ch">maurin@maurinwidmer.ch</a>';
+const APPLE = 'https://www.apple.com/legal/privacy/';
+const policies = {
+  de: {
+    title: "Hilfe – Heds Chäs?", home: "Startseite", contact: "Kontakt",
+    html: `
+<h1>Hilfe &amp; Support</h1>
+<p class="lead">Fragen, Ideen oder ein Fehler? Schreib uns an ${EMAIL}. Wir antworten in der Regel innert weniger Tage.</p>
+<h2>Wie halte ich einen Käse fest?</h2>
+<p>Tippe oben rechts auf <strong>+</strong>, such den Käse oder <strong>scanne die Etikette</strong>, gib Sterne und Aromen und, wenn du magst, die Käserei und wo du ihn gekauft hast an.</p>
+<h2>Mein Käse fehlt im Katalog.</h2>
+<p>Scanne die Etikette oder tippe auf <strong>«Nicht dabei? hinzufügen»</strong>. Du kannst ihn sofort verwenden. Für alle anderen erscheint er, sobald die Moderation ihn geprüft hat.</p>
+<h2>Ich habe ihn noch nicht probiert.</h2>
+<p>Schalte beim Festhalten <strong>«Noch nicht probiert – später bewerten»</strong> ein. Auf Wunsch erinnern wir dich ans Bewerten (Einstellungen → Ans Bewerten erinnern).</p>
+<h2>Kann ich einen Check-in ändern oder löschen?</h2>
+<p>Ja: Tippe bei deinem Check-in auf <strong>…</strong> → Bearbeiten oder Löschen.</p>
+<h2>Wer sieht meine Check-ins?</h2>
+<p>Bei einem öffentlichen Profil alle, bei einem privaten nur Personen, deren Anfrage du angenommen hast (Einstellungen → Privates Profil).</p>
+<h2>Falsche Angaben oder unangemessene Inhalte?</h2>
+<p>Tippe auf <strong>…</strong> → Melden. Die Moderation schaut sich jede Meldung an. Personen kannst du in ihrem Profil auch blockieren.</p>
+<h2>Brauche ich ein Konto?</h2>
+<p>Heds Chäs? nutzt dein iCloud-Konto, ohne Passwort und ohne E-Mail. Zum Einchecken musst du auf dem iPhone in iCloud angemeldet sein.</p>
+<h2>Wie lösche ich mein Konto?</h2>
+<p>Einstellungen → <strong>Konto löschen</strong>. Dein Profil, deine Check-ins, Fotos und Follows werden sofort gelöscht.</p>
+<h2>Hinweis zu den Angaben</h2>
+<p>Die Angaben stammen aus der Community und aus offenen Daten (Open Food Facts, OpenStreetMap) und können unvollständig oder falsch sein, z. B. zu Laktose, Milch oder Allergenen. Prüfe immer die Verpackung, besonders bei Allergien oder Unverträglichkeiten. Für die Richtigkeit wird keine Gewähr übernommen.</p>
+<h2>Kontakt</h2>
+<p>Maurin Dai · ${EMAIL} · <a href="privacy.html">Datenschutz</a></p>`
+  },
+  fr: {
+    title: "Aide – Heds Chäs?", home: "Accueil", contact: "Contact",
+    html: `
+<h1>Aide &amp; support</h1>
+<p class="lead">Une question, une idée ou un bug ? Écris-nous à ${EMAIL}. Nous répondons en général en quelques jours.</p>
+<h2>Comment noter un fromage ?</h2>
+<p>Touche <strong>+</strong> en haut à droite, cherche le fromage ou <strong>scanne l'étiquette</strong>, donne des étoiles et des arômes et, si tu veux, la fromagerie et l'endroit où tu l'as acheté.</p>
+<h2>Mon fromage manque dans le catalogue.</h2>
+<p>Scanne l'étiquette ou touche <strong>« Pas dans la liste ? Ajouter »</strong>. Tu peux l'utiliser tout de suite. Les autres le verront dès que la modération l'aura vérifié.</p>
+<h2>Je ne l'ai pas encore goûté.</h2>
+<p>Active <strong>« Pas encore goûté, noter plus tard »</strong>. Si tu veux, nous te rappelons de le noter (Réglages → Me rappeler de noter).</p>
+<h2>Puis-je modifier ou supprimer un check-in ?</h2>
+<p>Oui : touche <strong>…</strong> sur ton check-in → Modifier ou Supprimer.</p>
+<h2>Qui voit mes check-ins ?</h2>
+<p>Avec un profil public, tout le monde ; avec un profil privé, seulement les personnes dont tu as accepté la demande (Réglages → Profil privé).</p>
+<h2>Informations fausses ou contenu inapproprié ?</h2>
+<p>Touche <strong>…</strong> → Signaler. La modération examine chaque signalement. Tu peux aussi bloquer une personne depuis son profil.</p>
+<h2>Faut-il un compte ?</h2>
+<p>Heds Chäs? utilise ton compte iCloud, sans mot de passe ni e-mail. Pour faire un check-in, tu dois être connecté·e à iCloud sur ton iPhone.</p>
+<h2>Comment supprimer mon compte ?</h2>
+<p>Réglages → <strong>Supprimer le compte</strong>. Ton profil, tes check-ins, photos et abonnements sont supprimés immédiatement.</p>
+<h2>À propos des informations</h2>
+<p>Les informations proviennent de la communauté et de données ouvertes (Open Food Facts, OpenStreetMap) et peuvent être incomplètes ou fausses, p. ex. sur le lactose, le lait ou les allergènes. Vérifie toujours l'emballage, surtout en cas d'allergie ou d'intolérance. Aucune garantie n'est donnée quant à leur exactitude.</p>
+<h2>Contact</h2>
+<p>Maurin Dai · ${EMAIL} · <a href="privacy.html">Confidentialité</a></p>`
+  },
+  en: {
+    title: "Help – Heds Chäs?", home: "Home", contact: "Contact",
+    html: `
+<h1>Help &amp; support</h1>
+<p class="lead">Questions, ideas or a bug? Write to us at ${EMAIL}. We usually answer within a few days.</p>
+<h2>How do I log a cheese?</h2>
+<p>Tap <strong>+</strong> at the top right, search for the cheese or <strong>scan the label</strong>, give stars and flavours and, if you like, the dairy and where you bought it.</p>
+<h2>My cheese isn't in the catalog.</h2>
+<p>Scan the label or tap <strong>“Not there? Add”</strong>. You can use it right away; everyone else sees it once a moderator has checked it.</p>
+<h2>I haven't tried it yet.</h2>
+<p>Switch on <strong>“Not tried yet, rate later”</strong>. If you like, we remind you to rate it (Settings → Remind me to rate).</p>
+<h2>Can I edit or delete a check-in?</h2>
+<p>Yes: tap <strong>…</strong> on your check-in → Edit or Delete.</p>
+<h2>Who sees my check-ins?</h2>
+<p>With a public profile, everyone; with a private one, only people whose request you accepted (Settings → Private profile).</p>
+<h2>Wrong information or inappropriate content?</h2>
+<p>Tap <strong>…</strong> → Report. Moderators look at every report. You can also block people from their profile.</p>
+<h2>Do I need an account?</h2>
+<p>Heds Chäs? uses your iCloud account, with no password and no email. To check in, you need to be signed in to iCloud on your iPhone.</p>
+<h2>How do I delete my account?</h2>
+<p>Settings → <strong>Delete account</strong>. Your profile, check-ins, photos and follows are deleted immediately.</p>
+<h2>About the information</h2>
+<p>Information comes from the community and open data (Open Food Facts, OpenStreetMap) and may be incomplete or wrong, e.g. about lactose, milk or allergens. Always check the packaging, especially with allergies or intolerances. No guarantee is given for correctness.</p>
+<h2>Contact</h2>
+<p>Maurin Dai · ${EMAIL} · <a href="privacy.html">Privacy</a></p>`
+  }
+};
+
+const LANGS = ["de", "fr", "en"];
+const switcher = document.getElementById("langSwitcher");
+const langBtn = document.getElementById("langBtn");
+
+function setLang(lang) {
+  if (!LANGS.includes(lang)) lang = "de";
+  const p = policies[lang];
+  document.documentElement.lang = lang;
+  document.title = p.title;
+  document.getElementById("policy").innerHTML = p.html;
+  document.querySelectorAll("[data-i18n]").forEach(el => { const v = p[el.getAttribute("data-i18n")]; if (v) el.textContent = v; });
+  document.querySelectorAll(".lang-option").forEach(el => el.classList.toggle("active", el.dataset.lang === lang));
+  langBtn.textContent = lang.toUpperCase() + " ▾";
+  try { localStorage.setItem("hedschaes-lang", lang); } catch (e) {}
+  switcher.classList.remove("open");
+}
+
+langBtn.addEventListener("click", e => { e.stopPropagation(); switcher.classList.toggle("open"); });
+langBtn.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); switcher.classList.toggle("open"); } });
+document.querySelectorAll(".lang-option").forEach(el => el.addEventListener("click", () => setLang(el.dataset.lang)));
+document.addEventListener("click", () => switcher.classList.remove("open"));
+
+let saved = null;
+try { saved = localStorage.getItem("hedschaes-lang"); } catch (e) {}
+setLang(new URLSearchParams(location.search).get("lang") || saved || "de");
+</script>
+<noscript><main><p>Please enable JavaScript to read this privacy policy, or contact maurin@maurinwidmer.ch.</p></main></noscript>
+</body>
+</html>
